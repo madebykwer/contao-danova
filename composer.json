@@ -1,0 +1,18 @@
+{
+    "name": "madebykwer/contao-danova",
+    "description": "Contao 5 extension to integrate the danova accessibility script via system settings.",
+    "type": "contao-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Madebykwer\\ContaoDanova\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Madebykwer\\ContaoDanova\\ContaoManager\\Plugin"
+    },
+    "require": {
+        "php": ">=8.1",
+        "contao/core-bundle": "^5.0"
+    }
+}
