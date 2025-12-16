@@ -9,5 +9,5 @@ $GLOBALS['TL_LANG']['tl_settings']['danova_enable'] = [
 
 $GLOBALS['TL_LANG']['tl_settings']['danova_id'] = [
     'Danova ID',
-    'Wenn leer, wird die Standard-ID 98F8B3FD verwendet.',
+    'Bitte geben Sie Ihre Danova-ID ein.',
 ];

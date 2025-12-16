@@ -12,7 +12,11 @@ class OutputFrontendTemplateListener
             return $buffer;
         }
 
-        $id = Config::get('danova_id') ?: '98F8B3FD';
+        $id = Config::get('danova_id');
+
+        if (!$id) {
+            return $buffer;
+        }
 
         $script = sprintf(
             '<script src="https://api.danova.de/embed.js" id="da-script_id" da-data_id="%s" defer></script>',
