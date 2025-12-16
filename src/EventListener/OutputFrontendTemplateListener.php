@@ -8,10 +8,6 @@ class OutputFrontendTemplateListener
 {
     public function __invoke(string $buffer, string $template): string
     {
-        if ($template !== 'fe_page') {
-            return $buffer;
-        }
-
         if (!Config::get('danova_enable')) {
             return $buffer;
         }
