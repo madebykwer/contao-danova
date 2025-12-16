@@ -23,6 +23,15 @@ class OutputFrontendTemplateListener
             $id
         );
 
+        if (preg_match('/<header\\b[^>]*>/i', $buffer, $matches, PREG_OFFSET_CAPTURE)) {
+            $match = $matches[0];
+            $insertPosition = $match[1] + strlen($match[0]);
+
+            return substr($buffer, 0, $insertPosition)
+                . $script . "\n"
+                . substr($buffer, $insertPosition);
+        }
+
         return str_replace('</head>', $script . "\n</head>", $buffer);
     }
 }
