@@ -15,13 +15,13 @@ class LoadDataContainerListener
 
         // Felder
         $GLOBALS['TL_DCA']['tl_settings']['fields']['danova_enable'] = [
-            'label' => ['Danova aktivieren', 'Aktiviert das Barrierefreiheitstool von danova.'],
+            'label' => &$GLOBALS['TL_LANG']['tl_settings']['danova_enable'],
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'clr'],
         ];
 
         $GLOBALS['TL_DCA']['tl_settings']['fields']['danova_id'] = [
-            'label' => ['Danova ID', 'Wenn leer, wird die Standard-ID 98F8B3FD verwendet.'],
+            'label' => &$GLOBALS['TL_LANG']['tl_settings']['danova_id'],
             'inputType' => 'text',
             'eval' => ['tl_class' => 'w50'],
         ];
