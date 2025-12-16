@@ -2,6 +2,9 @@
 
 namespace Madebykwer\ContaoDanova\EventListener;
 
+use Contao\CoreBundle\ServiceAnnotation\Hook;
+
+#[Hook('loadDataContainer')]
 class LoadDataContainerListener
 {
     public function __invoke(string $table): void
@@ -10,6 +13,7 @@ class LoadDataContainerListener
             return;
         }
 
+        // Felder
         $GLOBALS['TL_DCA']['tl_settings']['fields']['danova_enable'] = [
             'label' => ['Danova aktivieren', 'Aktiviert das Barrierefreiheitstool von danova.'],
             'inputType' => 'checkbox',
@@ -22,6 +26,8 @@ class LoadDataContainerListener
             'eval' => ['tl_class' => 'w50'],
         ];
 
-        $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{danova_legend},danova_enable,danova_id';
+        // Palette erweitern
+        $GLOBALS['TL_DCA']['tl_settings']['palettes']['default']
+            .= ';{danova_legend},danova_enable,danova_id';
     }
 }
