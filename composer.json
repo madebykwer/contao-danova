@@ -1,6 +1,6 @@
 {
   "name": "madebykwer/contao-danova",
-  "description": "Contao 5 extension to integrate the danova accessibility script via system settings.",
+  "description": "Contao 4.13 and 5 extension to integrate the danova accessibility script via system settings.",
   "type": "contao-bundle",
   "license": "MIT",
   "version": "dev-main",
