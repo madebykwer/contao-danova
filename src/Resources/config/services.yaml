@@ -1,7 +1,7 @@
 services:
     Madebykwer\ContaoDanova\EventListener\LoadDataContainerListener:
         tags:
-            - { name: contao.dca }
+            - { name: contao.hook, hook: loadDataContainer }
 
     Madebykwer\ContaoDanova\EventListener\OutputFrontendTemplateListener:
         tags:
